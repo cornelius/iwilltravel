@@ -18,11 +18,12 @@
 <div class="container">
   <div class="span-24 header">
     <h1>I will travel</h1>
-    <a href="trips.html">All Trips</a>
+    <%= link_to "All Trips", :controller => "trips" %>
   </div>
 
   <div class="span-16 overview">
     London, June 20th 2012, 2 days
+    <%= link_to "Edit", :controller => "start" %>
   </div>
   <div class="span-8 overview last">
     6/15 done

@@ -1,4 +1,8 @@
 Iwilltravel::Application.routes.draw do
+  get "start/index"
+
+  resources :trips
+
   get "details/plan"
 
   get "details/weather"
