@@ -1,14 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Iwilltravel</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <title>I will travel</title>
+  <%= stylesheet_link_tag "blueprint/screen", :media => "screen,
+      projection" %>
+  <%= stylesheet_link_tag "blueprint/print", :media => "print" %>
+  <!--[if lt IE 8]>
+    <%= stylesheet_link_tag "blueprint/ie", :media => "screen,
+      projection" %>
+  <![endif]-->
+  <%= stylesheet_link_tag  "iwilltravel" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+<div class="container">
+  <div class="span-24 header">
+    <h1>I will travel</h1>
+    <a href="trips.html">All Trips</a>
+  </div>
+
+  <%= yield %>
+
+  <div class="span-24 header">
+    HCI Class 2012
+  </div>
+</div>
 
 </body>
 </html>
