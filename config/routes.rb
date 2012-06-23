@@ -1,4 +1,12 @@
 Iwilltravel::Application.routes.draw do
+  get "details/plan"
+
+  get "details/weather"
+
+  get "details/clothes"
+
+  get "details/pictures"
+
   get "home/index"
 
   # The priority is based upon order of creation:
