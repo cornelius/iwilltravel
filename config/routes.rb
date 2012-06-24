@@ -1,4 +1,6 @@
 Iwilltravel::Application.routes.draw do
+  root :to => "trips#index"
+  
   get "start/index"
   post "start/location"
   post "start/from"
