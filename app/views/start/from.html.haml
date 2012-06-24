@@ -1,0 +1,7 @@
+%p.story
+  I will travel to London on Saturday, June 30th.
+
+= form_tag :action => "to" do
+  = label_tag :from, "Until when?"
+  = text_field_tag :to
+  = submit_tag "Proceed"

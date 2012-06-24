@@ -32,3 +32,12 @@
   font-size: 120%;
   font-weight: bold;
 }
+
+.story {
+  font-size: 250%;
+}
+
+.story-frame {
+  padding: 40px;
+  padding-top: 120px;
+}

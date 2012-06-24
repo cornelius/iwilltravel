@@ -1,0 +1,7 @@
+%p.story
+  I will travel.
+
+= form_tag :action => "location" do
+  = label_tag :location, "Where?"
+  = text_field_tag :location
+  = submit_tag "Proceed"

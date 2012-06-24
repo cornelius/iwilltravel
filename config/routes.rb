@@ -1,5 +1,8 @@
 Iwilltravel::Application.routes.draw do
   get "start/index"
+  post "start/location"
+  post "start/from"
+  post "start/to"
 
   resources :trips
 
