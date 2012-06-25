@@ -1,0 +1,16 @@
+.span-6
+  .section
+    = render :partial => "details/plan-overview"
+    = link_to "Details...", :controller => "details", :action => "plan"
+.span-6
+  .section
+    = render :partial => "details/weather-overview"
+    = link_to "Details...", :controller => "details", :action => "weather"
+.span-6
+  .section
+    = render :partial => "details/clothes-overview"
+    = link_to "Details...", :controller => "details", :action => "clothes"
+.span-6.last
+  .section
+    = render :partial => "details/pictures-overview"
+    = link_to "Details...", :controller => "details", :action => "pictures"

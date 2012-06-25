@@ -1,4 +1,6 @@
 Iwilltravel::Application.routes.draw do
+  get "about/index"
+
   root :to => "trips#index"
   
   get "start/index"
@@ -17,6 +19,7 @@ Iwilltravel::Application.routes.draw do
   get "details/pictures"
 
   get "home/index"
+  get "home/add_section"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

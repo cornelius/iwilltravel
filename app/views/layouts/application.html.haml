@@ -8,19 +8,11 @@
     = csrf_meta_tags
   %body
     .container
-      .span-24.header
-        .menu
-          = link_to "All Trips", :controller => "trips"
-        %h2 I will travel...
-      .span-16.overview
-        .summary
-          %span London
-          %span June 20th 2012
-          %span 2 days
-          = link_to "Edit", :controller => "start"
-      .span-8.last.overview
-        .status
-          6/15 done
+      = render :partial => "layouts/header"
+      .span-24.spacer
+        &nbsp;
       = yield
+      .span-24.spacer
+        &nbsp;
       .span-24.header
         HCI Class 2012

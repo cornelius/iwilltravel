@@ -41,3 +41,22 @@
   padding: 40px;
   padding-top: 120px;
 }
+
+a {
+  text-decoration: none;
+}
+
+.section {
+  padding: 10px;
+}
+.section-content {
+  height: 380px;
+}
+
+.spacer {
+  height: 20px;
+}
+
+.adder {
+  float: right;
+}
