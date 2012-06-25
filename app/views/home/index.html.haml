@@ -1,16 +1,74 @@
 .span-6
-  .section
+  .section.section-plan
     = render :partial => "details/plan-overview"
-    = link_to "Details...", :controller => "details", :action => "plan"
 .span-6
-  .section
+  .section.section-weather
     = render :partial => "details/weather-overview"
-    = link_to "Details...", :controller => "details", :action => "weather"
 .span-6
-  .section
+  .section.section-clothes
     = render :partial => "details/clothes-overview"
-    = link_to "Details...", :controller => "details", :action => "clothes"
 .span-6.last
-  .section
+  .section.section-pictures
     = render :partial => "details/pictures-overview"
-    = link_to "Details...", :controller => "details", :action => "pictures"
+
+:javascript
+  $('.section-plan')
+    .css('cursor', 'pointer')
+    .click(
+      function(){
+        location.href = "/details/plan.html";
+      }
+    )
+    .hover(
+      function(){
+        $(this).css('background', '#FFFEE0');
+      },
+      function(){
+        $(this).css('background', '');
+      }
+    );
+  $('.section-weather')
+    .css('cursor', 'pointer')
+    .click(
+      function(){
+        location.href = "/details/weather.html";
+      }
+    )
+    .hover(
+      function(){
+        $(this).css('background', '#FFFEE0');
+      },
+      function(){
+        $(this).css('background', '');
+      }
+    );
+  $('.section-clothes')
+    .css('cursor', 'pointer')
+    .click(
+      function(){
+        location.href = "/details/clothes.html";
+      }
+    )
+    .hover(
+      function(){
+        $(this).css('background', '#FFFEE0');
+      },
+      function(){
+        $(this).css('background', '');
+      }
+    );
+  $('.section-pictures')
+    .css('cursor', 'pointer')
+    .click(
+      function(){
+        location.href = "/details/pictures.html";
+      }
+    )
+    .hover(
+      function(){
+        $(this).css('background', '#FFFEE0');
+      },
+      function(){
+        $(this).css('background', '');
+      }
+    );
