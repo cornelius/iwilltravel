@@ -88,3 +88,8 @@ a {
   margin-left: auto;
   margin-right: auto;
 }
+
+.help {
+  background-color: #DCF8D8;
+  padding: 10px;
+}
