@@ -20,6 +20,7 @@ Iwilltravel::Application.routes.draw do
 
   get "home/index"
   get "home/add_section"
+  get "home/settings"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
