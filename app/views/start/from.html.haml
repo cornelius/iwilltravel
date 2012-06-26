@@ -3,5 +3,12 @@
 
 = form_tag :action => "to" do
   = label_tag :from, "Until when?"
-  = text_field_tag :to
+  &nbsp;
+  = text_field_tag :to, "07/01/2012", :size => 10, :id => "datepicker"
+  &nbsp;
   = submit_tag "Proceed"
+
+:javascript
+  $(function() {
+    $( "#datepicker" ).datepicker({ showAnim: "slideDown" });
+  });
