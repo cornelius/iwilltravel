@@ -18,7 +18,8 @@ Iwilltravel::Application.routes.draw do
 
   get "details/pictures"
   get "details/add_item"
-  post "details/add_item"
+  get "details/edit_item"
+  get "details/remove_item"
 
   get "home/index"
   get "home/add_section"

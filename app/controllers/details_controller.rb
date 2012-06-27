@@ -19,4 +19,12 @@ class DetailsController < ApplicationController
   def add_item
     render "add_item"
   end
+
+  def edit_item
+    render "add_item"
+  end
+
+  def remove_item
+    render "add_item"
+  end
 end
