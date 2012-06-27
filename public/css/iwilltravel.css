@@ -107,16 +107,27 @@ a {
   margin-left: 30px;
 }
 
-.overview-link {
-  float: right;
-  margin-right: 20px;
+.item span.actions {
+  visibility: hidden;
+}
+.item:hover {
+  background: #FFFEE0;
+}
+.item:hover span.actions {
+  visibility: visible;
 }
 
 .items .actions {
   float: right;
   font-size: 80%;
+  margin-right: 6px;
+  margin-top: 4px;
 }
-
 .items .actions a {
   padding-left: 12px;
+}
+
+.overview-link {
+  float: right;
+  margin-right: 20px;
 }
