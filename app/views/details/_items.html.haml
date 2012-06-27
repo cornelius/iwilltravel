@@ -1,0 +1,10 @@
+.overview-link
+  = link_to "Back to overview", :controller => "home"
+.items
+  - @items.each do |item|
+    %p
+      = check_box_tag "item"
+      = label_tag "item", item
+  .item_adder
+    = link_to "+ Add item", :action => "add_item"
+  
