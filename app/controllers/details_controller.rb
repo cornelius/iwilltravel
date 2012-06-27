@@ -1,13 +1,22 @@
 class DetailsController < ApplicationController
   def plan
+    @items = [ "Book flight", "Book hotel", "Exchange money" ]
   end
 
   def weather
+    @items = [ "Sun screen", "Umbrella" ]
   end
 
   def clothes
+    @items = [ "2 pair of socks", "2 underwear", "2 T-shirts", "1 Jeans",
+               "1 Jacket", "1 Hat", "1 Sweater" ]
   end
 
   def pictures
+    @items = [ "Book ticket for big wheel" ]
+  end
+
+  def add_item
+    render "add_item"
   end
 end

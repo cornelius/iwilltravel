@@ -2,7 +2,4 @@
   .section
     = render :partial => "clothes-overview"
 .span-18.last
-  = link_to "Back to overview", :controller => "home"
-
-  %p
-    %em Todo items for this section will be added here
+  = render :partial => "items"
