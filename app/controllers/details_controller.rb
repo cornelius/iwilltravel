@@ -1,6 +1,6 @@
 class DetailsController < ApplicationController
   def plan
-    @items = [ "Book flight", "Book hotel", "Exchange money" ]
+    @items = [ "Book flight", "Book hotel", "Exchange money", "Print map" ]
   end
 
   def weather
