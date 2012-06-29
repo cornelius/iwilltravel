@@ -10,11 +10,24 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120623101939) do
+ActiveRecord::Schema.define(:version => 20120629001218) do
+
+  create_table "items", :force => true do |t|
+    t.string   "text"
+    t.boolean  "done"
+    t.boolean  "suggested"
+    t.integer  "category"
+    t.integer  "trip_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "trips", :force => true do |t|
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "location"
+    t.date     "from"
+    t.date     "to"
   end
 
 end
