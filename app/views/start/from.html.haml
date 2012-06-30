@@ -1,11 +1,12 @@
 %p.story
-  I will travel to London on Saturday, June 30th.
+  I will travel to #{@trip.location} on #{trip_date @trip.from}.
 
 = form_tag :action => "to" do
   = label_tag :from, "Until when?"
   &nbsp;
   = text_field_tag :to, "07/01/2012", :size => 10, :id => "datepicker"
   &nbsp;
+  = hidden_field_tag :id, @trip.id
   = submit_tag "Proceed"
 
 :javascript

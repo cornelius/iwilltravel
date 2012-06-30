@@ -14,10 +14,22 @@ module TripsHelper
     out += t.strftime( " #{t.day.ordinalize} %Y" )
   end
   
+  def trip_date d
+    if d.year == Date.today.year
+      out = d.strftime( "%A, %B #{d.day.ordinalize}" )
+    else
+      out = d.strftime( "%A, %B #{d.day.ordinalize} %Y" )
+    end
+  end
+  
+  def trip_duration trip
+    distance_of_time_in_words(trip.from, trip.to + 1.days)
+  end
+  
   def trip_title trip
     if trip.valid?
       "#{trip.location}, #{trip_date_range(trip)}, " +
-      "#{distance_of_time_in_words(trip.from, trip.to)}"
+      trip_duration( trip )
     else
       "Invalid trip data"
     end

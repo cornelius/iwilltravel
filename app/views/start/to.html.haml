@@ -1,5 +1,6 @@
 %p.story
-  I will travel to London for 2 days from Saturday, June 30th, to Sunday, July
-  1st.
+  I will travel to #{@trip.location} for #{trip_duration @trip}
+  from #{trip_date @trip.from}, to #{trip_date @trip.to}.
 
-= link_to "Plan my trip", :controller => "home", :action => "index"
+= link_to "Plan my trip", :controller => "home", :action => "index",
+  :id => @trip.id 
