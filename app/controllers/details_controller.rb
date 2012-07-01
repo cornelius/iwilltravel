@@ -4,22 +4,48 @@ class DetailsController < ApplicationController
   
   def plan
     @items = Item.where( :trip_id  => @trip.id).where( :category => 1 )
+    @category = 1
   end
 
   def weather
     @items = Item.where( :trip_id  => @trip.id).where( :category => 2 )
+    @category = 2
   end
 
   def clothes
     @items = Item.where( :trip_id  => @trip.id).where( :category => 3 )
+    @category = 3
   end
 
   def pictures
     @items = Item.where( :trip_id  => @trip.id).where( :category => 4 )
+    @category = 4
   end
 
   def add_item
-    render "add_item"
+    category = params[:category]
+    
+    trip = Trip.find params[:id]
+    
+    item = Item.new
+    item.text = params[:item_title]
+    item.suggested = false
+    item.done = false
+    item.category = category
+    
+    item.save!
+    trip.items << item
+    trip.save!
+
+    if category == "1"
+      redirect_to :action => "plan", :id => trip.id
+    elsif category == "2"
+      redirect_to :action => "weather", :id => trip.id
+    elsif category == "3"
+      redirect_to :action => "clothes", :id => trip.id
+    else
+      redirect_to :action => "pictures", :id => trip.id
+    end
   end
 
   def edit_item

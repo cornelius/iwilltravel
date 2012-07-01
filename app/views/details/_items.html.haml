@@ -9,6 +9,19 @@
         %span.actions
           = link_to "Edit", :action => "edit_item", :id => @trip.id
           = link_to "Remove", :action => "remove_item", :id => @trip.id
+  .item_editor
+    %p
+      = form_tag :action => "add_item" do |form|
+        = text_field_tag :item_title
+        &nbsp;
+        = hidden_field_tag :id, @trip.id
+        = hidden_field_tag :category, @category
+        = submit_tag "Save"
+
   .item_adder
-    = link_to "+ Add item", :action => "add_item", :id => @trip.id
-  
+    = link_to "+ Add item", "#"
+
+:javascript
+  $(".item_adder").click(function () {
+    $(".item_editor").toggle();
+  });

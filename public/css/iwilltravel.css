@@ -106,6 +106,10 @@ a {
 .item_adder {
   margin-left: 30px;
 }
+.item_editor {
+  margin-left: 30px;
+  display: none;
+}
 
 .item span.actions {
   visibility: hidden;

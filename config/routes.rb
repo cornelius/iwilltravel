@@ -17,7 +17,7 @@ Iwilltravel::Application.routes.draw do
   get "details/clothes"
 
   get "details/pictures"
-  get "details/add_item"
+  post "details/add_item"
   get "details/edit_item"
   get "details/remove_item"
 
