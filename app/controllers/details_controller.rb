@@ -1,4 +1,7 @@
 class DetailsController < ApplicationController
+
+  before_filter :find_trip
+  
   def plan
     @items = [ "Book flight", "Book hotel", "Exchange money", "Print map" ]
   end
@@ -27,4 +30,11 @@ class DetailsController < ApplicationController
   def remove_item
     render "add_item"
   end
+
+  private
+  
+  def find_trip
+    @trip = Trip.find params[:id]
+  end
+
 end

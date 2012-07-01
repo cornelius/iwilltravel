@@ -16,7 +16,7 @@
     .css('cursor', 'pointer')
     .click(
       function(){
-        location.href = "/details/plan.html";
+        location.href = "/details/plan.html?id=#{@trip.id}";
       }
     )
     .hover(
@@ -31,7 +31,7 @@
     .css('cursor', 'pointer')
     .click(
       function(){
-        location.href = "/details/weather.html";
+        location.href = "/details/weather.html?id=#{@trip.id}";
       }
     )
     .hover(
@@ -46,7 +46,7 @@
     .css('cursor', 'pointer')
     .click(
       function(){
-        location.href = "/details/clothes.html";
+        location.href = "/details/clothes.html?id=#{@trip.id}";
       }
     )
     .hover(
@@ -61,7 +61,7 @@
     .css('cursor', 'pointer')
     .click(
       function(){
-        location.href = "/details/pictures.html";
+        location.href = "/details/pictures.html?id=#{@trip.id}";
       }
     )
     .hover(

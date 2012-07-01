@@ -1,8 +1,11 @@
 .span-16.overview
   .summary
-    %span London
-    %span June 20th 2012
-    %span 2 days
+    %span
+      = @trip.location
+    %span
+      = trip_short_date @trip.from
+    %span
+      = trip_duration @trip
     %span.edit
       = link_to "Edit", :controller => "start"
 .span-8.last.overview

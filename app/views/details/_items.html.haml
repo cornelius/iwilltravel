@@ -1,5 +1,5 @@
 .overview-link
-  = link_to "Back to overview", :controller => "home"
+  = link_to "Back to overview", :controller => "home", :id => @trip.id
 .items
   - @items.each do |item|
     .item
@@ -7,8 +7,8 @@
         = check_box_tag "item"
         = label_tag "item", item
         %span.actions
-          = link_to "Edit", :action => "edit_item"
-          = link_to "Remove", :action => "remove_item"
+          = link_to "Edit", :action => "edit_item", :id => @trip.id
+          = link_to "Remove", :action => "remove_item", :id => @trip.id
   .item_adder
-    = link_to "+ Add item", :action => "add_item"
+    = link_to "+ Add item", :action => "add_item", :id => @trip.id
   

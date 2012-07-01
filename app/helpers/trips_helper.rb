@@ -22,6 +22,14 @@ module TripsHelper
     end
   end
   
+  def trip_short_date d
+    if d.year == Date.today.year
+      out = d.strftime( "%B #{d.day.ordinalize}" )
+    else
+      out = d.strftime( "%B #{d.day.ordinalize} %Y" )
+    end
+  end
+  
   def trip_duration trip
     distance_of_time_in_words(trip.from, trip.to + 1.days)
   end
