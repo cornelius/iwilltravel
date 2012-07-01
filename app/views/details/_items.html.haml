@@ -4,8 +4,8 @@
   - @items.each do |item|
     .item
       %p
-        = check_box_tag "item"
-        = label_tag "item", item
+        = check_box_tag "item#{item.id}"
+        = label_tag "item#{item.id}", item.text
         %span.actions
           = link_to "Edit", :action => "edit_item", :id => @trip.id
           = link_to "Remove", :action => "remove_item", :id => @trip.id

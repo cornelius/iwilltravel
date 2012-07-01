@@ -3,20 +3,19 @@ class DetailsController < ApplicationController
   before_filter :find_trip
   
   def plan
-    @items = [ "Book flight", "Book hotel", "Exchange money", "Print map" ]
+    @items = Item.where( :trip_id  => @trip.id).where( :category => 1 )
   end
 
   def weather
-    @items = [ "Sun screen", "Umbrella" ]
+    @items = Item.where( :trip_id  => @trip.id).where( :category => 2 )
   end
 
   def clothes
-    @items = [ "2 pair of socks", "2 underwear", "2 T-shirts", "1 Jeans",
-               "1 Jacket", "1 Hat", "1 Sweater" ]
+    @items = Item.where( :trip_id  => @trip.id).where( :category => 3 )
   end
 
   def pictures
-    @items = [ "Book ticket for big wheel" ]
+    @items = Item.where( :trip_id  => @trip.id).where( :category => 4 )
   end
 
   def add_item

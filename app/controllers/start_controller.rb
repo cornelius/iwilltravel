@@ -20,6 +20,8 @@ class StartController < ApplicationController
     @trip = Trip.find params[:id]
     @trip.to = params[:to]
     @trip.save!
+    
+    AutoSuggester.new.initial_suggestions @trip
   end
 
 end
