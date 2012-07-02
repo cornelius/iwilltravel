@@ -1,0 +1,20 @@
+.span-2
+  &nbsp;
+.span-20
+  - if @trip_id
+    .overview-link
+      = link_to "Back to overview", :controller => "home", :id => @trip_id
+  .suggestion-manager-logo
+    = image_tag "/images/suggested-logo-big.png"
+  %h2 Auto-suggestion manager
+  %p
+    %em
+      This page will allow to control the auto-suggestions, which items are
+      added automatically on creation of a trip.
+  %br{ :clear => "all" }
+  %p
+    %em Actual settings go here.
+  %p
+    %em.help
+      There will be a help text here.
+.span-2.last
