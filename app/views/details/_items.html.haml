@@ -8,7 +8,8 @@
         = label_tag "item#{item.id}", item.text
         %span.actions
           = link_to "Edit", :action => "edit_item", :id => @trip.id
-          = link_to "Remove", :action => "remove_item", :id => @trip.id
+          = link_to "Remove", :action => "remove_item", :id => @trip.id,
+            :item_id => item.id, :category => @category
   .item_editor
     %p
       = form_tag :action => "add_item" do |form|

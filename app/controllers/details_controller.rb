@@ -37,6 +37,26 @@ class DetailsController < ApplicationController
     trip.items << item
     trip.save!
 
+    redirect_to_category trip, category
+  end
+
+  def edit_item
+    render "add_item"
+  end
+
+  def remove_item
+    Item.destroy params[:item_id]
+
+    redirect_to_category @trip, params[:category]
+  end
+
+  private
+  
+  def find_trip
+    @trip = Trip.find params[:id]
+  end
+
+  def redirect_to_category trip, category
     if category == "1"
       redirect_to :action => "plan", :id => trip.id
     elsif category == "2"
@@ -47,19 +67,5 @@ class DetailsController < ApplicationController
       redirect_to :action => "pictures", :id => trip.id
     end
   end
-
-  def edit_item
-    render "add_item"
-  end
-
-  def remove_item
-    render "add_item"
-  end
-
-  private
   
-  def find_trip
-    @trip = Trip.find params[:id]
-  end
-
 end
