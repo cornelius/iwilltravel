@@ -9,4 +9,7 @@
   .weather-day
     Sunday
 .status
-  = details_status items
+  %span.status-text
+    = details_status items
+  %span.status-icon
+    = image_tag "/images/checkmark-green.png"

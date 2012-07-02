@@ -36,6 +36,11 @@
     $(".check-box").click(function() {
       var count = $("[type='checkbox']:checked").length;
       var total = $("[type='checkbox']").length;
-      $(".status").html(count + "/" + total + " done");
+      $(".status-text").html(count + "/" + total + " done");
+      if ( count === total ) {
+        $(".status-icon").show();
+      } else {
+        $(".status-icon").hide();
+      }
     });
   });

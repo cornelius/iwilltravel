@@ -2,4 +2,7 @@
 .section-content
   = image_tag "/images/clothes_dummy.png", :size => "200x370", :class => "center"
 .status
-  = details_status items
+  %span.status-text
+    = details_status items
+  %span.status-icon
+    = image_tag "/images/checkmark-green.png"

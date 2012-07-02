@@ -37,6 +37,12 @@
   font-weight: bold;
   text-align: center;
 }
+.status-icon {
+  margin-left: 10px;
+  margin-right: 40px;
+  display: none;
+  float: right;
+}
 
 .summary {
   padding: 8px;
