@@ -45,8 +45,12 @@ class DetailsController < ApplicationController
   end
 
   def remove_item
+    item = Item.find params[:item_id]
+    notice = "Deleted '#{item.text}'"
     Item.destroy params[:item_id]
 
+    flash[:notice] = notice
+    
     redirect_to_category @trip, params[:category]
   end
 

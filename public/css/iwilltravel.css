@@ -106,6 +106,13 @@ a {
   padding: 10px;
 }
 
+.flash {
+  background-color: #F7B1AB;
+  padding: 8px;
+  font-size: 80%;
+  margin-bottom: 30px;
+}
+
 .items {
   font-size: 200%;
   padding: 60px;

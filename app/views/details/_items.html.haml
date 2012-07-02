@@ -1,6 +1,11 @@
 .overview-link
   = link_to "Back to overview", :controller => "home", :id => @trip.id
 .items
+  - if flash[:notice]
+    .flash
+      = flash[:notice]
+      &nbsp;
+      = link_to "Undo", "#"
   - @items.each do |item|
     .item
       %p
