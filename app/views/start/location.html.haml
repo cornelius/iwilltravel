@@ -4,12 +4,15 @@
 = form_tag :action => "from" do
   = label_tag :from, "From when?"
   &nbsp;
-  = text_field_tag :from, "06/30/2012", :id => "datepicker", :size => 10
+  = text_field_tag :from, "2012-06-30", :id => "datepicker", :size => 10
   &nbsp;
   = hidden_field_tag :id, @trip.id
   = submit_tag "Proceed"
 
 :javascript
   $(function() {
-    $( "#datepicker" ).datepicker({ showAnim: "slideDown" });
+    $( "#datepicker" ).datepicker({
+      showAnim: "slideDown",
+      dateFormat: "yy-mm-dd"
+    });
   });
