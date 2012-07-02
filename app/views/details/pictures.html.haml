@@ -1,5 +1,5 @@
 .span-6
   .section
-    = render :partial => "pictures-overview"
+    = render :partial => "pictures-overview", :locals => { :items => @items }
 .span-18.last
   = render :partial => "items"

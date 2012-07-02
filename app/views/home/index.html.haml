@@ -1,15 +1,19 @@
 .span-6
   .section.section-plan
-    = render :partial => "details/plan-overview"
+    = render :partial => "details/plan-overview",
+      :locals => { :items => @items1 }
 .span-6
   .section.section-weather
-    = render :partial => "details/weather-overview"
+    = render :partial => "details/weather-overview",
+      :locals => { :items => @items2 }
 .span-6
   .section.section-clothes
-    = render :partial => "details/clothes-overview"
+    = render :partial => "details/clothes-overview",
+      :locals => { :items => @items3 }
 .span-6.last
   .section.section-pictures
-    = render :partial => "details/pictures-overview"
+    = render :partial => "details/pictures-overview",
+      :locals => { :items => @items4 }
 
 :javascript
   $('.section-plan')

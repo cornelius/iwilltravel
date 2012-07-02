@@ -31,6 +31,12 @@
   font-weight: bold;
   text-align: center;
 }
+.total-status {
+  padding: 8px;
+  font-size: 160%;
+  font-weight: bold;
+  text-align: center;
+}
 
 .summary {
   padding: 8px;
