@@ -4,7 +4,7 @@
 = form_tag :action => "location" do
   = label_tag :location, "Where?"
   &nbsp;
-  = text_field_tag :location, "London"
+  = text_field_tag :location, ""
   &nbsp;
   = hidden_field_tag :id, @trip.id
   = submit_tag "Proceed"
