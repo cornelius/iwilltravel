@@ -8,6 +8,9 @@ Iwilltravel::Application.routes.draw do
   post "start/from"
   post "start/to"
 
+  get "start/enter"
+  post "start/save"
+  
   resources :trips
 
   get "details/plan"

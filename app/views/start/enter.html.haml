@@ -1,0 +1,39 @@
+%p.story
+  I will travel.
+
+= form_tag :action => "save" do
+  %p
+    = label_tag :location, "Where?"
+    &nbsp;
+    = text_field_tag :location, "London"
+    &nbsp;
+
+  %p
+    = label_tag :from, "From when?"
+    &nbsp;
+    = text_field_tag :from, "2012-06-30", :id => "datepicker1", :size => 10
+    &nbsp;
+
+  %p
+    = label_tag :from, "Until when?"
+    &nbsp;
+    = text_field_tag :to, "2012-07-01", :size => 10, :id => "datepicker2"
+    &nbsp;
+
+  %p
+    = hidden_field_tag :id, @trip.id
+    = submit_tag "Proceed"
+
+:javascript
+  $(function() {
+    $( "#datepicker1" ).datepicker({
+      showAnim: "slideDown",
+      dateFormat: "yy-mm-dd"
+    });
+  });
+  $(function() {
+    $( "#datepicker2" ).datepicker({
+      showAnim: "slideDown",
+      dateFormat: "yy-mm-dd"
+    });
+  });
