@@ -437,3 +437,8 @@ Small Device Styles
 p.question {
   font-style: italic;
 }
+
+.caption {
+  font-style: italic;
+  text-align: center;
+}
