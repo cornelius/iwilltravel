@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="&quot;I will travel...&quot; : My story of Stanford's HCI class 2012" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>User Testing - &quot;I will travel...&quot;</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/cornelius/iwilltravel">View on GitHub</a>
+
+          <h1 id="project_title">&quot;I will travel...&quot;</h1>
+          <h2 id="project_tagline">My story of Stanford's HCI class 2012</h2>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+
+<h1>User Testing</h1>
+
+<h2>Prototype for User Testing</h2>
+
+<div>
+  <a href="finalprototype.html"><img src="screenshots/iwilltravel_5_home.png" /></a>
+</div>
+
+<h2>Script for User Testing</h2>
+
+<pre>
+# Script for user test assignment 5 HCI course
+
+## Introduction
+
+* Welcome
+* Goal of this session is to test a prototype for a personal travel assistant
+web site, which helps with creating and managing travel check lists.
+* Prototype is not complete, some functionality is only there as a stub. I'll
+help where you run into limitations of the prototype.
+* The test is about testing the app, not you.
+* Procedure: five tasks, think aloud, interview at the end
+* Think aloud: Use the app to accomplish the task and speak what you think, so
+I can take notes
+* Questions?
+
+## Start test
+
+* Sign consent form
+* Make yourself comfortable in front of your computer
+* Go to http://iwilltravel.heroku.com
+
+## Tasks
+
+Maximum 5 minutes per task.
+
+* Task 1: Create a trip to London. You are leaving on July 20th and are coming
+back the Sunday afterwards.
+* Task 2: Add two tasks to your checklist: Pack elegant shoes for the opera, and
+buy tickets for the opera.
+* Task 3: Remove the task for packing a hat.
+* Task 4: Add a task you think you would need to accomplish if you would travel
+to London
+* Task 5: You have booked flight and hotel, check off the todo items.
+
+* Task 6, comparative feedback, use alternative interface at
+http://iwilltravel.heroku.com/start/enter: Create a trip to London. You are
+leaving on July 20th and are coming back the Sunday afterward. 
+
+## Interview
+
+* Demographic data: age, gender, profession
+* Where were stumbling blocks?
+* How did the prototype help compared to a paper todo list?
+* Where could the prototype give more support?
+
+## End test
+
+* Thank you
+</pre>
+
+<h2>Observations from User Tests</h2>
+
+<p>User realized that checking the boxes updated the status and showed it with the mouse:</p>
+
+<img src="images/user_test_1.jpg" />
+
+<p>User tried to edit trip details by selecting the text (also shows that the app works less well on a very small screen):</p>
+
+<img src="images/user_test_2.jpg" />
+
+<p>User entered the same item two times for indicating that two pairs of shoes were needed:</p>
+
+<img src="images/user_test_3.jpg" />
+
+
+<h2>Summary of Findings</h2>
+
+<pre>
+# Findings user tests
+
+## Start
+
+* Users were confused about date arrangement of date picker which didn't use a
+  localized format.
+* Users did mistaked when entering the dates. This might partly be to them not
+  completly remembering the instructions as it was a kind of artificial setting,
+  but it shows in any case, that mistakes have to be considered and a way to
+  correct them has to be provided.
+* For editing the trip data, the controls weren't obvious how to get there.
+
+## Overview and navigation
+
+* Realizing that the home screen overview is a list of tasks wasn't obvious to
+  the users doing the tests, as there isn't mentioned anywhere that it's a list
+  of tasks.
+* Navigating between the details and overview pages wasn't obvious. While using
+  the back button of the browser also works, the navigation could be made more
+  clear, especially for going back from details to overview.
+
+## Details
+
+* Auto-suggestions weren't obvious. Users didn't get the meaning of the
+  auto-suggestion icon.
+* Entering new tasks generally works well. Might need a way to modify number of
+  items, e.g. for clothes as part of a task, though.
+* It needs to be clearer what checking the items means and when state is saved.
+
+## General
+
+* Application works less well on very small screens.
+* Application needs to be available on the go as well, e.g. as mobile version or
+  phone app.
+
+## Comparative feedback for alternative start workflows
+
+The tests didn't generate a significant tendency for one of the alternatives.
+Each alternative was preferred by one user, and the third user didn't perceive a
+relevant difference. More testing is needed to get a better understanding here.
+</pre>
+
+
+<h2>Changes</h2>
+
+<p><em>List changes you would implement in your next iteration -- we don't need
+you to implement your next iteration, but we want to see what you learned from
+your experiments. For each change, include a brief explanation for why you
+selected it.</em></p>
+
+<pre>
+# Changes
+
+* Inline editing for trip details on overview page, as this seems to be more
+  natural for users.
+* Add a page explaining and listing auto-suggestions, when the trip details are
+  entered, so that the logo and the concept of auto-suggestions is introduced
+  before it's shown on the check lists.
+* Make the "back to overview" link more prominent, so that users more easily
+  find it.
+* Consider adding the section titles as navigation on all details screens, to
+  allow for quicker and more natural navigation.
+* Add a subtle "saving..." message when checking checkboxes, so that users are
+  clear about what data is saved.
+* Localize site, especially date settings, so that users are not confused by
+  date or calendar formats not common in their locale.
+</pre>
+
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">&quot;I will travel...&quot; maintained by <a href="https://github.com/cornelius">cornelius</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
