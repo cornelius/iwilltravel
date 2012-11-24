@@ -302,7 +302,7 @@ Full-Width Styles
 }
 
 #header_wrap .inner {
-  padding: 50px 10px 30px 10px;
+  padding: 10px 0px 0px;
 }
 
 #project_title {
@@ -367,7 +367,7 @@ Full-Width Styles
 }
 
 #main_content {
-  padding-top: 40px;
+  padding-top: 20px;
 }
 
 #footer_wrap {
@@ -443,8 +443,14 @@ p.question {
   text-align: center;
 }
 
-.page-nav .next {
+.page-nav {
   float: right;
+}
+.page-nav .back {
+  padding-right: 10px;
+}
+.page-nav .next {
+  padding-left: 10px;
 }
 
 ul ul {
