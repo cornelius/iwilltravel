@@ -442,3 +442,7 @@ p.question {
   font-style: italic;
   text-align: center;
 }
+
+.page-nav .next {
+  float: right;
+}
