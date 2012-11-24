@@ -446,3 +446,7 @@ p.question {
 .page-nav .next {
   float: right;
 }
+
+ul ul {
+  margin-bottom: 0px;
+}
