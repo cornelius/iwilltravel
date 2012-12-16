@@ -1,7 +1,7 @@
 # I will travel
 
 This is a prototype for a personal travel assitant web app. It was done as part
-of Stanford's online HCI class [1] at the beginning of 2012.
+of Stanford's online HCI class [[1]] at the beginning of 2012.
 
 Read the story behind this app at http://cornelius.github.com/iwilltravel/
 
