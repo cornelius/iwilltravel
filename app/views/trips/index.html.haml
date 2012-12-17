@@ -11,3 +11,5 @@
 - @trips.each do |trip|
   %li
     = link_to trip_title(trip), :controller => "home", :id => trip.id
+    %span.destroy-link
+      = link_to "Delete", trip_path(trip), :method => :delete
