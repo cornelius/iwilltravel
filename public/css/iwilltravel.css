@@ -25,6 +25,16 @@
   float: right;
 }
 
+.destroy-link {
+  margin-left: 100px;
+}
+li span.destroy-link {
+  visibility: hidden;
+}
+li:hover span.destroy-link {
+  visibility: visible;
+}
+
 .status {
   padding: 8px;
   font-size: 160%;
